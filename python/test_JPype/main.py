@@ -2,6 +2,8 @@
 
 from jpype import JClass, java
 import jpype
+# from java_interface import java_interface
+from java_interface import java_interface_1
 from TransferParam import *
 
 if __name__ == "__main__":
@@ -104,6 +106,14 @@ if __name__ == "__main__":
         print("\n\n##############  print(e.stacktrace())  ######################")
         print(e.stacktrace())
     print(res)
+
+    # 测试python实现java接口作为回调函数
+    res = myJpypeTest.test_recall(to_int(1), JProxy("params.testInterface", inst=java_interface_1()))
+    # res = myJpypeTest.test_recall(to_int(1), java_interface())
+    print(res)
+
+
+
 
 
 

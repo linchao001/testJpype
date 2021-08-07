@@ -56,3 +56,5 @@ def to_Enum(cls, param):
     java_class = JClass(cls)
     # 获取枚举对象中的成员
     return getattr(java_class, param)
+
+

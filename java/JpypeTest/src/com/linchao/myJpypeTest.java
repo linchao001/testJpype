@@ -3,6 +3,7 @@ package com.linchao;
 
 import params.Animals;
 import params.testEnum;
+import params.testInterface;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -111,6 +112,11 @@ public class myJpypeTest {
             throw new ArithmeticException("异常：除数不能为0");
         }
         return a/b;
+    }
+
+    public int test_recall(int a, testInterface a_interface_obj){
+        int b = a_interface_obj.testMethod();
+        return a+b;
     }
 
 
