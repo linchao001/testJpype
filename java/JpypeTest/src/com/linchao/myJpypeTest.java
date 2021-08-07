@@ -106,6 +106,13 @@ public class myJpypeTest {
         return testenum.getColor();
     }
 
+    public int test_Exception(int a, int b){
+        if(b == 0){
+            throw new ArithmeticException("异常：除数不能为0");
+        }
+        return a/b;
+    }
+
 
     public static void main(String[] args){
         System.out.println("Jpype Test...");
